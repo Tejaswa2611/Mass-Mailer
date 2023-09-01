@@ -23,6 +23,7 @@ async function sendEmail(user, transporter) {
     console.log(`Skipping user ${user.name} due to invalid email: ${email}`);
     return;
   }
+  
 
   const mailOptions = {
     from: "hecticworld2003@gmail.com",
