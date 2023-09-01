@@ -3,7 +3,7 @@ const csv = require("csv-parser");
 const nodemailer = require("nodemailer");
 const validator = require("email-validator");
 
-const EMAIL_DELAY_MS = 2000; // Delay between sending emails (in milliseconds)
+const EMAIL_DELAY_MS = 2000; //(in milliseconds)
 
 async function readCSV(filePath) {
   return new Promise((resolve, reject) => {
@@ -25,10 +25,22 @@ async function sendEmail(user, transporter) {
   }
 
   const mailOptions = {
-    from: "mathurkiit@gmail.com",
+    from: "hecticworld2003@gmail.com",
     to: email,
     subject: "Subject of the Email",
-    text: `Hello ${user.name},\n\nThis is the content of the email.`,
+    text: `Hello ${user.name},\n\n this is content of the mail`,
+    attachments: [
+      {
+        filename: 'attachment.txt', // Filename
+        content: 'Here is the content of the attachment.', // Location of file
+      },
+      {
+        filename: 'attachment.txt', // Filename
+        content: 'Here is the content of the attachment.', // Location of file
+      },
+      
+    ],
+    
   };
 
   try {
