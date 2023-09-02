@@ -30,17 +30,17 @@ async function sendEmail(user, transporter) {
     to: email,
     subject: "Subject of the Email",
     text: `Hello ${user.name},\n\n this is content of the mail`,
-    attachments: [
-      {
-        filename: 'attachment.txt', // Filename
-        content: 'Here is the content of the attachment.', // Location of file
-      },
-      {
-        filename: 'attachment.txt', // Filename
-        content: 'Here is the content of the attachment.', // Location of file
-      },
+    // attachments: [
+    //   {
+    //     filename: 'attachment.txt', // Filename
+    //     content: 'Here is the content of the attachment.', // Location of file
+    //   },
+    //   {
+    //     filename: 'attachment.txt', // Filename
+    //     content: 'Here is the content of the attachment.', // Location of file
+    //   },
       
-    ],
+    // ],
     
   };
 
